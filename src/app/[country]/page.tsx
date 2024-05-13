@@ -2,7 +2,7 @@ export function Page() {
     
     return (
         <main>
-            <p>Details page</p>
+            <p>Country Detail page</p>
         </main>
     )
 }
