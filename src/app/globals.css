@@ -1,16 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
   color: #111517;
   background: #FFFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     color: #FFFFFF;
     background: #808080;
   }
-}
+} */
 
 /*# sourceMappingURL=globals.css.map */
