@@ -4,21 +4,21 @@ import styles from '@/app/ui/card.module.css'
 export default function Card({country}) {
 
     return (
-        <div className='card flex flex-col'>
-            <div className='card-image'>
+        <div className={styles.card}>
+            <div className={styles.cardImage}>
                 <Image
-                  src={country.flags.svg}
+                  src={country.flags.png}
                   alt='dark_mode'
                   width={264}
                   height={160}
                 />
             </div>
             <div className='flex flex-col space-y-2'>
-                <span><b>{country.name.common}</b></span>
+                <span><b>{country.name}</b></span>
                 <div>
                     <p>Population: {country.population}</p>
                     <p>Region: {country.region}</p>
-                    <p>Capital: {country.capital[0]}</p>
+                    <p>Capital: {country.capital}</p>
                 </div>
             </div>                     
         </div>

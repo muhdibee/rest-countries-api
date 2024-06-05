@@ -2,16 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: #111517;
-  background: #FFFFFF;
+:root {
+  --bg-LightTheme: #F2F2F2;
+  --bgLight-LightTheme: #FFFFFF;
+  --textColor-LightTheme: #111517;
+
 }
 
-/* @media (prefers-color-scheme: dark) {
+body {
+  color: var(--textColor);
+  background: var(--bgColor);
+}
+
+@media (prefers-color-scheme: dark) {
   body {
+    --bg-LightTheme: #F2F2F2;
+    --bgLight-LightTheme: #FFFFFF;
+    --textColor-LightTheme: #111517;
+  
     color: #FFFFFF;
     background: #808080;
   }
-} */
+}
 
-/*# sourceMappingURL=globals.css.map */

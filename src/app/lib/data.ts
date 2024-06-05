@@ -7,7 +7,5 @@ export async function fetchCountries(): Promise<any> {
         return response.data;
     }catch(error){
         console.log('API Error: ', error);
-        throw new Error("Failed to fetch countries");
-        // return "Failed to fetch countries"
     }
 }

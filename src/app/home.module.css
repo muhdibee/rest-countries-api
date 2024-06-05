@@ -1,0 +1,22 @@
+
+.cardsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 50px 80px;
+    gap: 30px 30px;
+    justify-content: center;
+    border: 2px solid rgb(236, 228, 228);
+}
+
+.brd {
+    border: 1px solid red;
+}
+
+@media screen and (max-width: 400px) {
+    .cardsContainer {
+        margin: 25px 40px;
+        gap: 15px 15px;
+
+    }
+    
+}
