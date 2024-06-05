@@ -3,25 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --bg-LightTheme: #F2F2F2;
-  --bgLight-LightTheme: #FFFFFF;
-  --textColor-LightTheme: #111517;
+  --bg: #F2F2F2;
+  --bgLight: #FFFFFF;
+  --textColor: #111517;
 
 }
 
 body {
   color: var(--textColor);
-  background: var(--bgColor);
+  background: var(--bg);
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #2B3844;
+    --bgLight: #808080;
+    --textColor: #FFFFFF;
+
+  }
+
   body {
-    --bg-LightTheme: #F2F2F2;
-    --bgLight-LightTheme: #FFFFFF;
-    --textColor-LightTheme: #111517;
-  
-    color: #FFFFFF;
-    background: #808080;
+    color: var(--textColor);
+    background: var(--bg);
   }
 }
 
