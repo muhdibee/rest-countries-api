@@ -5,16 +5,17 @@ export default function Card({country}) {
 
     return (
         <div className={styles.card}>
-            <div className={styles.cardImage}>
+            <div className={styles.imageContainer}>
                 <Image
-                  src={country.flags.png}
-                  alt='dark_mode'
-                  width={264}
-                  height={160}
+                 className={styles.CardImage}
+                  src={country.flags.svg}
+                  alt={`${country.name} flag`}
+                 sizes="100%"
+                 fill
                 />
             </div>
-            <div className='flex flex-col space-y-2'>
-                <span><b>{country.name}</b></span>
+            <div className={styles.textContainer}>
+                <b className='mb-2'>{country.name}</b>
                 <div>
                     <p>Population: {country.population}</p>
                     <p>Region: {country.region}</p>

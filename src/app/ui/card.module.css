@@ -2,11 +2,24 @@
   width: 264px;
   height: 336px;
   border-radius: 5px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  background-color: var(--bgLight);
 }
-.card .cardImage {
-  height: 160;
-  width: 264px;
-  border-radius: 5px;
+.card .imageContainer {
+  position: relative;
+  width: 16.5rem;
+  height: 10rem;
+  /* border: 1px solid white; */
+}
 
+.card .CardImage {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  object-fit: cover;
+
+}
+.card .textContainer {
+  margin-top: 1.7rem;
+  margin-left: 1rem;
+  /* border: 1px solid white; */
 }

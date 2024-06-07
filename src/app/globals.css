@@ -6,7 +6,6 @@
   --bg: #F2F2F2;
   --bgLight: #FFFFFF;
   --textColor: #111517;
-
 }
 
 body {
@@ -14,12 +13,13 @@ body {
   background: var(--bg);
 }
 
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #2B3844;
     --bgLight: #808080;
     --textColor: #FFFFFF;
-
   }
 
   body {
