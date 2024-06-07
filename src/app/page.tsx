@@ -4,6 +4,7 @@ import countriesList from '@/app/lib/countries-data.json'
 import Header from "./ui/header";
 import Card from "./ui/card";
 import styles from "@/app/home.module.css"
+import Search from "./ui/search";
 
 export default async function Home() {
 
@@ -14,6 +15,7 @@ export default async function Home() {
   return (
     <main>
       <Header />
+      <Search />
       <main className={styles.cardsContainer} >
         <Card country={countries[1]}/>
         <Card country={countries[2]}/>

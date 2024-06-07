@@ -15,8 +15,8 @@ export default function Card({country}) {
                 />
             </div>
             <div className={styles.textContainer}>
-                <b className='mb-2'>{country.name}</b>
-                <div>
+                <b className=''>{country.name}</b>
+                <div className='mt-2'>
                     <p>Population: {country.population}</p>
                     <p>Region: {country.region}</p>
                     <p>Capital: {country.capital}</p>
