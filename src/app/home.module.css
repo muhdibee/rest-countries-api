@@ -4,12 +4,19 @@
     flex-flow: row wrap;
     margin: 50px 80px;
     gap: 30px 30px;
-    justify-content: center;
-    /* border: 2px solid rgb(236, 228, 228); */
+    justify-content:space-between;
 }
 
 .brd {
     border: 1px solid red;
+}
+
+.searchFilterContainer {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 50px 80px;
+    gap: 30px 30px;
+    justify-content:space-between;
 }
 
 @media screen and (max-width: 400px) {

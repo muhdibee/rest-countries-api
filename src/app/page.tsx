@@ -5,6 +5,7 @@ import Header from "./ui/header";
 import Card from "./ui/card";
 import styles from "@/app/home.module.css"
 import Search from "./ui/search";
+import Filter from "./ui/filter";
 
 export default async function Home() {
 
@@ -15,7 +16,10 @@ export default async function Home() {
   return (
     <main>
       <Header />
-      <Search />
+      <div className={`${styles.searchFilterContainer}`}>
+        <Search />
+        <Filter />
+      </div>
       <main className={styles.cardsContainer} >
         <Card country={countries[1]}/>
         <Card country={countries[2]}/>
@@ -27,6 +31,8 @@ export default async function Home() {
         <Card country={countries[8]}/>
         <Card country={countries[9]}/>
         <Card country={countries[10]}/>
+        <Card country={countries[11]}/>
+        <Card country={countries[12]}/>
       </main>
     </main>
   );

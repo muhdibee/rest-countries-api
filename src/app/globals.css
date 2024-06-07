@@ -15,7 +15,7 @@ body {
 
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --bg: #2B3844;
     --bgLight: #808080;
@@ -27,4 +27,4 @@ body {
     background: var(--bg);
   }
 }
-
+ */
