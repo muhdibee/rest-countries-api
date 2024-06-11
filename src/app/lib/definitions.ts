@@ -1,120 +1,64 @@
-export type Countries = {
-    name:         {
-        common:     string;
-        official:   string;
-        nativeName: NativeName;
-    },
-    tld:          string[];
-    cca2:         string;
-    ccn3:         string;
-    cca3:         string;
-    cioc:         string;
-    independent:  boolean;
-    status:       string;
-    unMember:     boolean;
-    currencies:   Currencies;
-    idd:          Idd;
-    capital:      string[];
-    altSpellings: string[];
-    region:       string;
-    subregion:    string;
-    languages:    {
-        ron: string;
-    };
-    translations: { [key: string]: Translation };
-    latlng:       number[];
-    landlocked:   boolean;
-    borders:      string[];
-    area:         number;
-    demonyms:     Demonyms;
-    flag:         string;
-    maps:         Maps;
-    population:   number;
-    gini:         Gini;
-    fifa:         string;
-    car:          Car;
-    timezones:    string[];
-    continents:   string[];
-    flags:        Flags;
-    coatOfArms:   CoatOfArms;
-    startOfWeek:  string;
-    capitalInfo:  CapitalInfo;
-    postalCode:   PostalCode;
+export interface Country {
+    name:           string;
+    topLevelDomain: string[];
+    alpha2Code:     string;
+    alpha3Code:     string;
+    callingCodes:   string[];
+    capital:        string;
+    altSpellings:   string[];
+    subregion:      string;
+    region:         string;
+    population:     number;
+    latlng:         number[];
+    demonym:        string;
+    area:           number;
+    timezones:      string[];
+    borders:        string[];
+    nativeName:     string;
+    numericCode:    string;
+    flags:          Flags;
+    currencies:     Currency[];
+    languages:      Language[];
+    translations:   Translations;
+    flag:           string;
+    regionalBlocs:  RegionalBloc[];
+    cioc:           string;
+    independent:    boolean;
 }
 
-export type CapitalInfo = {
-    latlng: number[];
-}
-
-export type Car = {
-    signs: string[];
-    side:  string;
-}
-
-export type CoatOfArms = {
-    png: string;
-    svg: string;
-}
-
-export type Currencies = {
-    MDL: Mdl;
-}
-
-export type Mdl = {
+export interface Currency {
+    code:   string;
     name:   string;
     symbol: string;
 }
 
-export type Demonyms = {
-    eng: Eng;
-    fra: Eng;
-}
-
-export type Eng = {
-    f: string;
-    m: string;
-}
-
-export type Flags = {
-    png: string;
+export interface Flags {
     svg: string;
-    alt: string;
+    png: string;
 }
 
-export type Gini = {
-    "2018": number;
+export interface Language {
+    iso6391:    string;
+    iso6392:    string;
+    name:       string;
+    nativeName: string;
 }
 
-export type Idd = {
-    root:     string;
-    suffixes: string[];
+export interface RegionalBloc {
+    acronym: string;
+    name:    string;
 }
 
-export type Languages = {
-    ron: string;
-}
-
-export type Maps = {
-    googleMaps:     string;
-    openStreetMaps: string;
-}
-
-export type Name = {
-    common:     string;
-    official:   string;
-    nativeName: NativeName;
-}
-
-export type NativeName = {
-    ron: Translation;
-}
-
-export type Translation = {
-    official: string;
-    common:   string;
-}
-
-export type PostalCode = {
-    format: string;
-    regex:  string;
+export interface Translations {
+    br: string;
+    pt: string;
+    nl: string;
+    hr: string;
+    fa: string;
+    de: string;
+    es: string;
+    fr: string;
+    ja: string;
+    it: string;
+    hu: string;
 }
