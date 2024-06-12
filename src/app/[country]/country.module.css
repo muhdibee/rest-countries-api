@@ -1,2 +1,9 @@
 .detailsMain {
 }
+.imageContainer {
+    width: 560px;
+    height: 401px;
+    position: relative;
+    /* border: 1px solid var(--textColor); */
+    /* background-color: var(--bgLight); */
+}

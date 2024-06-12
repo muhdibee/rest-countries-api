@@ -1,5 +1,5 @@
 import axios from "axios";
-import {Countries} from '@/app/lib/definitions';
+import {Country} from '@/app/lib/definitions';
 import countriesList from "@/app/lib/countries-data.json";
 
 
@@ -9,12 +9,11 @@ export  function fetchCountries(): any {
 
 }
 
-export async function fetchCountry(country: String): Promise<any> {
-    try{
-        const response = await axios.get(`https://restcountries.com/v3/name/${country}?fullText=true`);
-        return response.data;
-    }catch(error){
-        console.log('API Error: ', error);
-        return "An error occurred";
+export function fetchCountry(countryName: string): any | null | undefined {
+    const country = countriesList.filter((oneCountry) => oneCountry.name.toLocaleLowerCase() === countryName.toLocaleLowerCase());
+    if(country.length < 1){
+        return 'not found'
     }
+    return country[0];
 }
+

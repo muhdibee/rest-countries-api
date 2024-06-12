@@ -10,7 +10,7 @@ export default async function Home() {
   const countries = fetchCountries();
 
   return (
-    <main className="border">
+    <main className="">
       <div className={`${styles.searchFilterContainer}`}>
         <Search />
         <Filter />
