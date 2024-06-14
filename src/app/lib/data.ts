@@ -9,7 +9,7 @@ export  function fetchCountries(): any {
 
 }
 
-export function fetchCountry(alpha3Code: string): any | null | undefined {
+export function fetchCountry(alpha3Code: string): any | null | undefined | string {
     const country = countriesList.filter((oneCountry) => oneCountry.alpha3Code === alpha3Code);
     if(country.length < 1){
         return 'not found'

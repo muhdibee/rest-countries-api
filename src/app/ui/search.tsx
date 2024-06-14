@@ -7,7 +7,7 @@ import styles from "./search.module.css";
 export default function Search() {
   return (
     <div
-      className={`${styles.searchContainer} mx-3 my-3 flex shadow rounded px-6 py-2 w-4/12`}>
+      className={`${styles.searchContainer} my-3 flex px-6 py-2 w-full md:w-4/12 shadow rounded`}>
       <GoSearch className="text-lg mt-1" />
       <input
         className={`ml-3 w-full`}

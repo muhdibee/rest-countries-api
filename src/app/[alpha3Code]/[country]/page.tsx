@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import style from "./country.module.css";
-import { BackButton } from "../../ui/country/buttons";
+import { BackButton, BorderCountries } from "../../ui/country/buttons";
 import { fetchCountry } from "../../lib/data";
 import { useEffect, useState } from "react";
 
@@ -41,7 +41,7 @@ export default function Country({ params }) {
             fill
           />
         </div>
-        <div className="my-6  w-5/12">
+        <div className="my-6 w-5/12">
           <h1 className="font-bold text-3xl ">{country.name}</h1>
           <div
             className="flex justify-between  flex-wrap w-1/2 my-6 mb-6"
@@ -65,7 +65,7 @@ export default function Country({ params }) {
                 <b>Capital: </b> {country.capital}
               </p>
             </div>
-            <div className=" ">
+            <div>
               <p>
                 <b>Top Level Domain: </b> {country.topLevelDomain}
               </p>
@@ -80,14 +80,14 @@ export default function Country({ params }) {
               </p>
             </div>
           </div>
-          <div className="flex flex-nowrap">
-            Border Countries:
-            <div className="ml-2">
-              <BackButton />
-              <BackButton />
-              <BackButton />
+          {country.borders && (
+            <div className="">
+              <b>Border Countries:</b>
+              <div className="mt-2 max-w-full">
+                <BorderCountries country={country} />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </main>
