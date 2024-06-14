@@ -1,0 +1,16 @@
+.searchContainer {
+    background-color: var(--bgLight);
+    color: var(--textColor);
+}
+
+.searchContainer input:focus {
+    outline-style: none;
+}
+
+.searchContainer GoSearch {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    color: greenyellow;
+
+}
