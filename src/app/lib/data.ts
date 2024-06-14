@@ -9,8 +9,8 @@ export  function fetchCountries(): any {
 
 }
 
-export function fetchCountry(countryName: string): any | null | undefined {
-    const country = countriesList.filter((oneCountry) => oneCountry.name.toLocaleLowerCase() === countryName.toLocaleLowerCase());
+export function fetchCountry(alpha3Code: string): any | null | undefined {
+    const country = countriesList.filter((oneCountry) => oneCountry.alpha3Code === alpha3Code);
     if(country.length < 1){
         return 'not found'
     }

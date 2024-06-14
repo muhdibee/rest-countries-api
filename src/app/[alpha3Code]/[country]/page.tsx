@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
 import style from "./country.module.css";
-import { BackButton } from "../ui/country/buttons";
-import { fetchCountry } from "../lib/data";
+import { BackButton } from "../../ui/country/buttons";
+import { fetchCountry } from "../../lib/data";
 import { useEffect, useState } from "react";
 
 export default function Country({ params }) {
-  const { country: countryParam } = params;
-  const country = fetchCountry(countryParam);
+  const { alpha3Code } = params;
+  const country = fetchCountry(alpha3Code);
   const [countryData, setCountryData] = useState("loading");
 
   useEffect(() => {
@@ -38,7 +38,6 @@ export default function Country({ params }) {
             src={country.flags.svg}
             className="rounded-lg"
             alt={country.name}
-            sizes="100%"
             fill
           />
         </div>

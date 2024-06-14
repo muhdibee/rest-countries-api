@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Card({ country }) {
   return (
     <div className={styles.card}>
-      <Link href={`/${country.name}`}>
+      <Link href={`/${country.alpha3Code}/${country.name}`}>
         <div className={styles.imageContainer}>
           <Image
             className={styles.CardImage}
