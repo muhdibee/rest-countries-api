@@ -29,7 +29,7 @@
     .main {
         width: 100%;
         padding:2rem 1rem;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     .searchFilterContainer {
@@ -37,9 +37,7 @@
     }
 
     .cardsContainer {
-        /* margin: 25px 40px; */
         gap: 15px 15px;
-
     }
     
 }

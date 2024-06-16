@@ -27,7 +27,6 @@ export const BorderCountries = ({ country }) => {
   return (
     <div className="flex flex-wrap">
       {country.borders.map((alpha3Code: string) => {
-        console.log(alpha3Code);
         let fetchedCountry = fetchCountry(alpha3Code);
         return (
           <div className={`${styles.borderCountry} rounded`}>

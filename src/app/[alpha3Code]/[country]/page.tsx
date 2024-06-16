@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import style from "./country.module.css";
+import styles from "./country.module.css";
 import { BackButton, BorderCountries } from "../../ui/country/buttons";
 import { fetchCountry } from "../../lib/data";
 import { useEffect, useState } from "react";
@@ -30,10 +30,10 @@ export default function Country({ params }) {
     );
   }
   return (
-    <main className="px-7 md:px-20 py-6 md:py-12 mb-6">
+    <main className="px-7 md:px-20 py-16 mb-8">
       <BackButton />
-      <div className="flex flex-wrap space-x-12">
-        <div className={`${style.imageContainer} rounded-lg`}>
+      <div className={`${styles.mainContainer}`}>
+        <div className={`${styles.imageContainer} rounded-lg`}>
           <Image
             src={country.flags.svg}
             className="rounded-lg"
@@ -41,14 +41,10 @@ export default function Country({ params }) {
             fill
           />
         </div>
-        <div className="my-6 w-5/12">
+        <div className={`${styles.textDetailsContainer}`}>
           <h1 className="font-bold text-3xl ">{country.name}</h1>
-          <div
-            className="flex justify-between flex-wrap w-1/2 my-6 mb-6"
-            style={{
-              width: "100%",
-            }}>
-            <div>
+          <div className="flex flex-wrap my-6 mb-6">
+            <div className="mr-2">
               <p>
                 <b>Native Name:</b> {country.nativeName}
               </p>
@@ -65,7 +61,7 @@ export default function Country({ params }) {
                 <b>Capital: </b> {country.capital ? country.capital : "N/A"}
               </p>
             </div>
-            <div>
+            <div className="">
               <p>
                 <b>Top Level Domain: </b>{" "}
                 {country.topLevelDomain ? country.topLevelDomain : "N/A"}
@@ -85,7 +81,7 @@ export default function Country({ params }) {
           {country.borders && (
             <div className="">
               <b>Border Countries:</b>
-              <div className="mt-2 max-w-full">
+              <div className="mt-2 max-w-full flex">
                 <BorderCountries country={country} />
               </div>
             </div>
