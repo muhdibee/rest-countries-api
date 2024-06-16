@@ -1693,7 +1693,7 @@
     "independent": true
   },
   {
-    "name": "Bolivia (Plurinational State of Bolivia)",
+    "name": "Plurinational State of Bolivia",
     "topLevelDomain": [".bo"],
     "alpha2Code": "BO",
     "alpha3Code": "BOL",
@@ -3618,7 +3618,7 @@
     "independent": true
   },
   {
-    "name": "Congo (Democratic Republic of the Congo)",
+    "name": "Democratic Republic of the Congo",
     "topLevelDomain": [".cd"],
     "alpha2Code": "CD",
     "alpha3Code": "COD",
@@ -7230,7 +7230,7 @@
     "independent": true
   },
   {
-    "name": "Iran (Islamic Republic of)",
+    "name": "Iran (Islamic Republic of Iran)",
     "topLevelDomain": [".ir"],
     "alpha2Code": "IR",
     "alpha3Code": "IRN",
@@ -9794,7 +9794,7 @@
     "independent": true
   },
   {
-    "name": "Micronesia (Federated States of)",
+    "name": "Federated States of Micronesia",
     "topLevelDomain": [".fm"],
     "alpha2Code": "FM",
     "alpha3Code": "FSM",
@@ -15028,7 +15028,7 @@
     "independent": true
   },
   {
-    "name": "Tanzania, United Republic of",
+    "name": "United Republic of Tanzania",
     "topLevelDomain": [".tz"],
     "alpha2Code": "TZ",
     "alpha3Code": "TZA",
@@ -16344,7 +16344,7 @@
     "independent": true
   },
   {
-    "name": "Venezuela (Bolivarian Republic of)",
+    "name": "Bolivarian Republic of Venezuela",
     "topLevelDomain": [".ve"],
     "alpha2Code": "VE",
     "alpha3Code": "VEN",

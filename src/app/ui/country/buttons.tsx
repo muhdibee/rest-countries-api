@@ -3,6 +3,7 @@ import { fetchCountry } from "@/app/lib/data";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import styles from "./buttons.module.css";
+import { GoArrowLeft } from "react-icons/go";
 
 export const BackButton = ({}) => {
   const router = useRouter();
@@ -10,9 +11,12 @@ export const BackButton = ({}) => {
   return (
     <button
       type="button"
-      className="border rounded px-6 py-1 mb-20"
+      className={`${styles.backButton} rounded px-4 py-1 mb-20 flex`}
       onClick={() => router.back()}>
-      Back
+      <span className="mt-1 mr-2">
+        <GoArrowLeft />
+      </span>
+      <span>Back</span>
     </button>
   );
 };
@@ -25,9 +29,8 @@ export const BorderCountries = ({ country }) => {
       {country.borders.map((alpha3Code: string) => {
         console.log(alpha3Code);
         let fetchedCountry = fetchCountry(alpha3Code);
-        console.log(fetchedCountry.name);
         return (
-          <div className={`${styles.borderCountry} border rounded`}>
+          <div className={`${styles.borderCountry} rounded`}>
             <Link href={`/${alpha3Code}/${fetchedCountry.name}`}>
               <span>{fetchedCountry.name}</span>
             </Link>

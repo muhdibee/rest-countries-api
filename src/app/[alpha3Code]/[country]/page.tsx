@@ -44,7 +44,7 @@ export default function Country({ params }) {
         <div className="my-6 w-5/12">
           <h1 className="font-bold text-3xl ">{country.name}</h1>
           <div
-            className="flex justify-between  flex-wrap w-1/2 my-6 mb-6"
+            className="flex justify-between flex-wrap w-1/2 my-6 mb-6"
             style={{
               width: "100%",
             }}>
@@ -62,15 +62,17 @@ export default function Country({ params }) {
                 <b>Sub Region: </b> {country.subregion}
               </p>
               <p>
-                <b>Capital: </b> {country.capital}
+                <b>Capital: </b> {country.capital ? country.capital : "N/A"}
               </p>
             </div>
             <div>
               <p>
-                <b>Top Level Domain: </b> {country.topLevelDomain}
+                <b>Top Level Domain: </b>{" "}
+                {country.topLevelDomain ? country.topLevelDomain : "N/A"}
               </p>
               <p>
-                <b>Currency: </b> {country.currencies[0].name}
+                <b>Currency: </b>{" "}
+                {country.currencies ? country.currencies[0].name : "N/A"}
               </p>
               <p>
                 <b>Languages: </b>
