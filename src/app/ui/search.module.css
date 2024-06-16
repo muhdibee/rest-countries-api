@@ -17,3 +17,7 @@
 .searchContainer input::placeholder {
     color: var(--textColor);
 }
+
+@media screen and (max-width: 400px) {
+    
+}

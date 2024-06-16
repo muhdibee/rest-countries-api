@@ -1,10 +1,16 @@
 
+.main {
+    width: 100%;
+    padding:3.13rem 5rem;
+    /* border: 1px solid red; */
+}
 .cardsContainer {
     display: flex;
     flex-flow: row wrap;
-    margin: 50px 80px;
+    /* margin: 50px 80px; */
     gap: 30px 30px;
-    justify-content:space-between;
+    justify-content: center;
+    /* border: 1px solid red; */
 }
 
 .brd {
@@ -14,14 +20,24 @@
 .searchFilterContainer {
     display: flex;
     flex-flow: row wrap;
-    margin: 50px 80px;
+    margin: 3.13rem 0px;
     gap: 30px 30px;
     justify-content:space-between;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
+    .main {
+        width: 100%;
+        padding:2rem 1rem;
+        border: 1px solid red;
+    }
+
+    .searchFilterContainer {
+        margin: 2rem 0px;
+    }
+
     .cardsContainer {
-        margin: 25px 40px;
+        /* margin: 25px 40px; */
         gap: 15px 15px;
 
     }
