@@ -29,7 +29,7 @@ export const BorderCountries = ({ country }) => {
       {country.borders.map((alpha3Code: string) => {
         let fetchedCountry = fetchCountry(alpha3Code);
         return (
-          <div className={`${styles.borderCountry} rounded`}>
+          <div key={alpha3Code} className={`${styles.borderCountry} rounded`}>
             <Link href={`/${alpha3Code}/${fetchedCountry.name}`}>
               <span>{fetchedCountry.name}</span>
             </Link>

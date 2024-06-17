@@ -73,7 +73,7 @@ export default function Country({ params }) {
               <p>
                 <b>Languages: </b>
                 {country.languages.map((language: { name: string }) => (
-                  <span>{language.name} </span>
+                  <span key={language.name}>{language.name} </span>
                 ))}
               </p>
             </div>
