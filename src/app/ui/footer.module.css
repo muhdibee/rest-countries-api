@@ -1,0 +1,11 @@
+.footerContainer {
+    /* position:fixed; */
+    bottom: 0px;
+    z-index: 10;
+    /* background-color: var(--bgLight); */
+    color: var(--textColor);
+}
+
+.linkedIn {
+    color: cyan;
+}
