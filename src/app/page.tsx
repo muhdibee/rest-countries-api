@@ -11,6 +11,7 @@ import Filter from "./ui/filter";
 export default function Home() {
   const countries = fetchCountries();
 
+  const pathname = usePathname();
   const SearchParams = useSearchParams();
   const params = new URLSearchParams(SearchParams);
 

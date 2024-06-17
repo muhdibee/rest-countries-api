@@ -11,10 +11,10 @@ export default function Header() {
         <Link href={"/"}>Where in the world?</Link>
       </div>
       <div className="flex space-x-2">
-        <div style={{ height: "1.25rem", width: "1.25rem" }}>
+        <span style={{ height: "1.25rem", width: "1.25rem" }}>
           <Image src={moon} alt="dark_mode" className="mr-1" />
-        </div>
-        Dark Mode
+        </span>
+        <span>Dark Mode</span>
       </div>
     </div>
   );
