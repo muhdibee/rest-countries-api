@@ -11,13 +11,9 @@ export default function Header() {
         <Link href={"/"}>Where in the world?</Link>
       </div>
       <div className="flex space-x-2">
-        <Image
-          src={moon}
-          alt="dark_mode"
-          width={20}
-          height={20}
-          className="mr-1"
-        />
+        <div style={{ height: "1.25rem", width: "1.25rem" }}>
+          <Image src={moon} alt="dark_mode" className="mr-1" />
+        </div>
         Dark Mode
       </div>
     </div>
