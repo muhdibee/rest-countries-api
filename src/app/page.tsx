@@ -1,13 +1,20 @@
+"use client";
+import countriesList from "@/app/lib/countries-data.json";
 import { fetchCountries } from "@/app/lib/data";
 import { Country } from "./lib/definitions";
-import countriesList from "@/app/lib/countries-data.json";
+import { useSearchParams, usePathname } from "next/navigation";
 import Card from "./ui/card";
 import styles from "@/app/home.module.css";
 import Search from "./ui/search";
 import Filter from "./ui/filter";
 
-export default async function Home() {
+export default function Home() {
   const countries = fetchCountries();
+
+  const SearchParams = useSearchParams();
+  const params = new URLSearchParams(SearchParams);
+
+  console.log(params);
 
   return (
     <main className={`${styles.main}`}>
