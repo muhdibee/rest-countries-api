@@ -43,7 +43,7 @@ export default function Country({ params }) {
         </div>
         <div className={`${styles.textDetailsContainer}`}>
           <h1 className="font-bold text-3xl ">{country.name}</h1>
-          <div className="flex flex-wrap my-6 mb-6">
+          <div className="flex flex-wrap border justify-between  my-6 mb-6">
             <div className="mr-2">
               <p>
                 <b>Native Name:</b> {country.nativeName}
@@ -61,7 +61,7 @@ export default function Country({ params }) {
                 <b>Capital: </b> {country.capital ? country.capital : "N/A"}
               </p>
             </div>
-            <div className="">
+            <div className="mt-6 md:mt-0">
               <p>
                 <b>Top Level Domain: </b>{" "}
                 {country.topLevelDomain ? country.topLevelDomain : "N/A"}

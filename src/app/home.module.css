@@ -20,6 +20,7 @@
 .searchFilterContainer {
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
     margin: 3.13rem 0px;
     gap: 30px 30px;
     justify-content:space-between;
