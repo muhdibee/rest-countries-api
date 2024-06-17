@@ -4,7 +4,7 @@ export default function Filter() {
   return (
     <span>
       <select className={`${styles.select} px-4 py-2 rounded`}>
-        <option>filter by Region</option>
+        <option>Filter by Region</option>
         <option value="africa">Africa</option>
         <option value="america">America</option>
         <option value="asia">Asia</option>

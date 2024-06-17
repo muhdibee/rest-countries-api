@@ -43,7 +43,7 @@ export default function Country({ params }) {
         </div>
         <div className={`${styles.textDetailsContainer}`}>
           <h1 className="font-bold text-3xl ">{country.name}</h1>
-          <div className="flex flex-wrap border justify-between  my-6 mb-6">
+          <div className="flex flex-wrap justify-between  my-6 mb-6">
             <div className="mr-2">
               <p>
                 <b>Native Name:</b> {country.nativeName}

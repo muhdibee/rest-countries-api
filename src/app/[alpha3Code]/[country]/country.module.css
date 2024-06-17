@@ -13,13 +13,26 @@
     position: relative;
     overflow: hidden
 }
+
 .textDetailsContainer {
 max-width: 30rem;
 }
 
 @media screen and (max-width: 600px) {
     .imageContainer {
-        border: 1px solid var(--textColor);
+        /* border: 1px solid var(--textColor); */
     }
+
+    .imageContainer {
+        width: 20rem;
+        height: 14.3rem;
+        position: relative;
+        overflow: hidden
+    }
+    .textDetailsContainer {
+        max-width: 20rem;
+    }
+        
+    
     
 }
