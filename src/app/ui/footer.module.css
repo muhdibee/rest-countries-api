@@ -9,3 +9,6 @@
 .linkedIn {
     color: cyan;
 }
+.linkedIn:hover {
+    text-decoration: underline;
+}

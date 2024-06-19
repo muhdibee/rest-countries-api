@@ -1,5 +1,11 @@
-.select {
+.filter {
     background-color: var(--bgLight);
     color: var(--textColor);
     
+}
+.filter:focus, .filter:hover {
+    outline-style: none;
+}
+.filter .selected {
+    display:none;
 }

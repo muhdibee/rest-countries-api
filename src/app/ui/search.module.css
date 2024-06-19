@@ -8,7 +8,7 @@
     color: inherit;
 
 }
-.searchContainer input:focus {
+.searchContainer input:focus, .searchContainer input:hover {
     outline-style: none;
     background-color: var(--bgLight);
     color: var(--textColor);
