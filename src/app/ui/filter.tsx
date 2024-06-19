@@ -4,12 +4,13 @@ import styles from "./filter.module.css";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 export default function Filter() {
-  const [filter, setFilter] = useState("none");
-
+  const router = useRouter();
   const pathname = usePathname();
 
   const handleChange = (filter: string): void => {
-    console.log(filter);
+    // console.log(filter);
+    // console.log(pathname);
+    router.push(`${pathname}?region=${filter}`);
   };
 
   return (

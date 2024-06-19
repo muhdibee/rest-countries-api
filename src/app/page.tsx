@@ -7,15 +7,16 @@ import Card from "./ui/card";
 import styles from "@/app/home.module.css";
 import Search from "./ui/search";
 import Filter from "./ui/filter";
+import { useState } from "react";
 
 export default function Home() {
-  const countries = fetchCountries();
+  const allCountries = fetchCountries();
+  const [countries, setCountries] = useState(allCountries);
 
-  const pathname = usePathname();
-  const SearchParams = useSearchParams();
-  const params = new URLSearchParams(SearchParams);
-
-  console.log(params);
+  // const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const region = searchParams.get("region");
+  console.log(region);
 
   return (
     <main className={`${styles.main}`}>
