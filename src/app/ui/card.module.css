@@ -5,6 +5,12 @@
   /* border: 1px solid white; */
   background-color: var(--bgLight);
 }
+.card:hover {
+  border: 1px solid var(--bgLight);
+  background-color: var(--bg);
+
+}
+
 .card .imageContainer {
   position: relative;
   width: 16.5rem;

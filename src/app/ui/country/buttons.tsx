@@ -11,7 +11,7 @@ export const BackButton = ({}) => {
   return (
     <button
       type="button"
-      className={`${styles.backButton} rounded px-4 py-1 mb-20 flex`}
+      className={`${styles.backButton} rounded px-4 py-1 mb-20 flex hover:shadow-lg`}
       onClick={() => router.back()}>
       <span className="mt-1 mr-2">
         <GoArrowLeft />

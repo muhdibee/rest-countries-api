@@ -1,9 +1,18 @@
 .backButton {    
     background-color: var(--bgLight);
+    border: 1px solid var(--bgLight);
 }
-
+.backButton:hover, .backButton:focus{
+    background-color: var(--bg);
+    border: 1px solid var(--bgLight);
+}
 .borderCountry {
     margin: 3px 3px;
     padding: 2px 0.5rem;
+    border: 1px solid var(--bgLight);
     background-color: var(--bgLight);
+}
+.borderCountry:hover, .borderCountry:focus {
+    background-color: var(--bg);
+    border: 1px solid var(--bgLight);
 }
