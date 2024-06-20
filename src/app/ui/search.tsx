@@ -16,7 +16,9 @@ export default function Search() {
   const handleSubmit = (e) => {
     e.preventDefault();
     router.push(`/?country=${searchText.toLocaleLowerCase()}`);
-    setSearchText("");
+    setTimeout(() => {
+      setSearchText("");
+    }, 5000);
   };
 
   return (

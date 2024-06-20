@@ -46,11 +46,13 @@ export default function Home() {
 
   const checkSearchAvailable = () => {
     if (country !== null) {
+      const searchPattern = new RegExp(country, "i");
       setTimeout(() => {
-        const filterResult = allCountries.filter(
-          (countryObj) =>
-            countryObj.name.toLocaleLowerCase() === country.toLocaleLowerCase()
-        );
+        const filterResult = allCountries.filter((countryObj) => {
+          if (countryObj.name.toLocaleLowerCase().match(searchPattern)) {
+            return countryObj;
+          }
+        });
         setCountries(filterResult);
       }, 500);
     }
