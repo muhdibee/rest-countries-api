@@ -13,24 +13,27 @@ export default function Home() {
   const allCountries = fetchCountries();
   const [countries, setCountries] = useState(allCountries);
 
-  useEffect(() => {}, [countries]);
+  // useEffect(() => {}, []);
 
   // const pathname = usePathname();
   const searchParams = useSearchParams();
   const region = searchParams.get("region");
 
-  // if (countries.length < 1) {
-  //   return (
-  //     <main className={`${styles.main}`}>
-  //       <p>Loading...</p>
-  //     </main>
-  //   );
-  // } else if (region !== null) {
-  //   const filterResult = allCountries.filter(
-  //     (country) => country.region === region
-  //   );
-  //   setCountries(filterResult);
-  // }
+  if (countries.length < 1) {
+    return (
+      <main className={`${styles.main}`}>
+        <p>countries not found</p>
+      </main>
+    );
+  } else if (region !== null) {
+    setTimeout(() => {
+      const filterResult = allCountries.filter(
+        (country) =>
+          country.region.toLocaleLowerCase() === region.toLocaleLowerCase()
+      );
+      setCountries(filterResult);
+    }, 500);
+  }
 
   return (
     <main className={`${styles.main}`}>
