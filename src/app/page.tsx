@@ -2,13 +2,14 @@
 import countriesList from "@/app/lib/countries-data.json";
 import { fetchCountries } from "@/app/lib/data";
 import { Country as ICountry } from "./lib/definitions";
-import { useSearchParams, usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Card from "./ui/card";
 import styles from "@/app/home.module.css";
 import Search from "./ui/search";
 import Filter from "./ui/filter";
 import { useEffect, useState } from "react";
 import { BackButton } from "./ui/country/buttons";
+import { Suspense } from "react";
 
 export default function Home() {
   const allCountries = fetchCountries();
@@ -81,7 +82,9 @@ export default function Home() {
     return (
       <main className={`${styles.main}`}>
         <div className={`${styles.searchFilterContainer}`}>
-          <Search />
+          <Suspense>
+            <Search />
+          </Suspense>
           <Filter />
         </div>
         <section className={styles.cardsContainer}>
