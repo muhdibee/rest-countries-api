@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./country.module.css";
 import { BackButton, BorderCountries } from "../../ui/country/buttons";
 import { fetchCountry } from "../../lib/data";
-import { ICountry } from "../../lib/definitions";
+import { Country as ICountry } from "../../lib/definitions";
 import { useEffect, useState } from "react";
 
 export default function Country({ params }) {
