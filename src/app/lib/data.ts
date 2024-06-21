@@ -1,5 +1,5 @@
 import axios from "axios";
-import {Country} from '@/app/lib/definitions';
+import {ICountry} from '@/app/lib/definitions';
 import countriesList from "@/app/lib/countries-data.json";
 
 
