@@ -1,12 +1,14 @@
 .footerContainer {
+    background-color: var(--bgLight);
     position:fixed;
     bottom: 0px;
+    left: 0px;
     z-index: 10;
     color: var(--textColor);
 }
 
 .linkedIn {
-    color: cyan;
+    color: rgba(0, 255, 255, 0.795);
 }
 .linkedIn:hover {
     text-decoration: underline;
