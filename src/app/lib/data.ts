@@ -10,9 +10,9 @@ export  function fetchCountries(): any {
 }
 
 export function fetchCountry(alpha3Code: string): any | null | undefined | string {
-    const country = countriesList.filter((oneCountry) => oneCountry.alpha3Code === alpha3Code);
+    const country = countriesList.filter((oneCountry) => oneCountry.alpha3Code.toLocaleLowerCase() === alpha3Code.toLocaleLowerCase());
     if(country.length < 1){
-        return 'not found'
+        return "Country not found";
     }
     return country[0];
 }

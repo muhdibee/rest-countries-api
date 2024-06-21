@@ -3,29 +3,31 @@ import Image from "next/image";
 import styles from "./country.module.css";
 import { BackButton, BorderCountries } from "../../ui/country/buttons";
 import { fetchCountry } from "../../lib/data";
+import { ICountry } from "../../lib/definitions";
 import { useEffect, useState } from "react";
 
 export default function Country({ params }) {
   const { alpha3Code } = params;
   const country = fetchCountry(alpha3Code);
-  const [countryData, setCountryData] = useState("loading");
+
+  const [countryData, setCountryData] = useState<ICountry | string>("loading");
 
   useEffect(() => {
     setCountryData(country);
-  }, []);
+  }, [countryData, country]);
 
   if (countryData === "loading") {
     return (
       <main className="px-7 md:px-20 py-6 md:py-12">
         <BackButton />
-        <div>Loading</div>
+        <div>{countryData}</div>
       </main>
     );
-  } else if (countryData === "not found") {
+  } else if (countryData === "Country not found") {
     return (
       <main className="px-7 md:px-20 py-6 md:py-12">
         <BackButton />
-        <div>Country not found</div>
+        <div>{countryData}</div>
       </main>
     );
   }
