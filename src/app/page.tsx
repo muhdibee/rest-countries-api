@@ -1,7 +1,7 @@
 "use client";
 import countriesList from "@/app/lib/countries-data.json";
 import { fetchCountries } from "@/app/lib/data";
-import { ICountry } from "./lib/definitions";
+import { Country as ICountry } from "./lib/definitions";
 import { useSearchParams, usePathname } from "next/navigation";
 import Card from "./ui/card";
 import styles from "@/app/home.module.css";
