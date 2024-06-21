@@ -1,7 +1,7 @@
 "use client";
 import countriesList from "@/app/lib/countries-data.json";
 import { fetchCountries } from "@/app/lib/data";
-import { Country } from "./lib/definitions";
+import { ICountry } from "./lib/definitions";
 import { useSearchParams, usePathname } from "next/navigation";
 import Card from "./ui/card";
 import styles from "@/app/home.module.css";
@@ -85,7 +85,7 @@ export default function Home() {
           <Filter />
         </div>
         <section className={styles.cardsContainer}>
-          {countries.map((country: Country) => {
+          {countries.map((country: ICountry) => {
             return <Card key={country.name} country={country} />;
           })}
         </section>
